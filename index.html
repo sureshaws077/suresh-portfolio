@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suresh Mulukala | Solutions Architect</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Configuration for "AI Futuristic" Theme -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'bg-primary': '#0F172A',
+                        'bg-secondary': '#1E293B',
+                        'accent-primary': '#8B5CF6',
+                        'accent-secondary': '#22D3EE',
+                        'text-primary': '#F1F5F9',
+                        'text-secondary': '#94A3B8',
+                        'indigo-custom': '#6366F1',
+                        'cyan-custom': '#06B6D4',
+                    },
+                    backgroundImage: {
+                        'gradient-primary': 'linear-gradient(135deg, #6366F1, #06B6D4)',
+                        'gradient-glow': 'radial-gradient(circle at center, rgba(139, 92, 246, 0.15) 0%, rgba(15, 23, 42, 0) 70%)',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for dark futuristic look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0F172A; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1E293B; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8B5CF6; 
+        }
+        
+        /* Utility for smooth gradient text */
+        .text-gradient {
+            background: linear-gradient(135deg, #6366F1, #06B6D4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-bg-primary text-text-primary font-sans antialiased selection:bg-accent-secondary selection:text-bg-primary">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 bg-bg-primary/80 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.1)] border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#home" class="text-2xl font-extrabold text-text-primary tracking-tight">Suresh<span class="text-accent-secondary">.M</span></a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-sm font-medium text-text-secondary hover:text-accent-secondary transition-colors duration-300">About</a>
+                    <a href="#skills" class="text-sm font-medium text-text-secondary hover:text-accent-secondary transition-colors duration-300">Skills</a>
+                    <a href="#experience" class="text-sm font-medium text-text-secondary hover:text-accent-secondary transition-colors duration-300">Experience</a>
+                    <a href="#pocs" class="text-sm font-medium text-text-secondary hover:text-accent-secondary transition-colors duration-300">POCs</a>
+                    <a href="#credentials" class="text-sm font-medium text-text-secondary hover:text-accent-secondary transition-colors duration-300">Credentials</a>
+                </div>
+                <div class="hidden md:flex">
+                    <a href="#contact" class="inline-flex items-center justify-center px-5 py-2.5 rounded-lg text-sm font-semibold text-white bg-gradient-primary hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-300 transform hover:-translate-y-0.5">
+                        Let's Connect
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <section id="home" class="pt-32 pb-20 lg:pt-48 lg:pb-32 relative overflow-hidden">
+        <!-- Abstract Background Glows -->
+        <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-gradient-glow rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-gradient-glow rounded-full blur-[100px] pointer-events-none" style="background: radial-gradient(circle at center, rgba(6, 182, 212, 0.15) 0%, rgba(15, 23, 42, 0) 70%);"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
+                
+                <!-- Text Content -->
+                <div class="lg:col-span-7 text-center lg:text-left mb-12 lg:mb-0">
+                    <div class="inline-flex items-center px-4 py-1.5 rounded-full bg-accent-primary/10 text-accent-secondary text-sm font-medium mb-6 border border-accent-secondary/20 shadow-[0_0_15px_rgba(34,211,238,0.1)]">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        Certified Pega Lead System Architect
+                    </div>
+                    <div class="inline-flex items-center px-4 py-1.5 rounded-full bg-accent-primary/10 text-accent-secondary text-sm font-medium mb-6 border border-accent-secondary/20 shadow-[0_0_15px_rgba(34,211,238,0.1)]">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        Certified Pega Decision Consultant
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-text-primary tracking-tight mb-6 leading-[1.1]">
+                        Hi, I'm Suresh. <br>
+                        <span class="text-gradient">I architect enterprise solutions.</span>
+                    </h1>
+                    <p class="mt-4 text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                         Solutions Architect with 18+ years of experience building scalable applications leveraging Pega, AWS, and AI. Always fueled by a good cup of Irani Chai. ☕
+                    </p>
+                    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#experience" class="inline-flex items-center justify-center px-8 py-3.5 font-semibold rounded-lg text-white bg-gradient-primary hover:shadow-[0_0_25px_rgba(99,102,241,0.5)] transition-all duration-300 transform hover:-translate-y-1">
+                            View My Journey
+                        </a>
+                        <a href="#contact" class="inline-flex items-center justify-center px-8 py-3.5 border border-white/10 font-semibold rounded-lg text-text-primary bg-bg-secondary hover:bg-white/5 hover:border-white/20 transition-all duration-300 transform hover:-translate-y-1">
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Profile Image -->
+                <div class="lg:col-span-5 relative flex justify-center lg:justify-end">
+                    <div class="relative w-72 h-72 sm:w-96 sm:h-96">
+                        <!-- Futuristic Image Border/Glow -->
+                        <div class="absolute inset-0 rounded-3xl bg-gradient-primary p-1 shadow-[0_0_30px_rgba(99,102,241,0.3)]">
+                            <div class="h-full w-full bg-bg-primary rounded-[22px] overflow-hidden">
+                                <img class="object-cover w-full h-full opacity-90 hover:opacity-100 transition-opacity duration-500" src="assets/images/Sureshai.png" alt="Suresh Mulukala" onerror="this.src='https://ui-avatars.com/api/?name=Suresh+Mulukala&size=512&background=1E293B&color=F1F5F9'">
+                            </div>
+                        </div>
+                        
+                        <!-- Floating Badge -->
+                        <div class="absolute -bottom-6 -left-6 bg-bg-secondary/90 backdrop-blur p-4 rounded-xl shadow-2xl flex items-center gap-4 z-20 border border-white/10">
+                            <div class="bg-accent-primary/20 p-2 rounded-lg text-accent-primary">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold text-text-primary">Pega LSA</p>
+                                <p class="text-xs text-text-secondary">Certified Expert</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. About Me Section -->
+    <section id="about" class="py-20 bg-bg-secondary relative border-y border-white/5">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-sm font-bold tracking-widest text-accent-secondary uppercase mb-3">The Architect Behind the Code</h2>
+            <h3 class="text-3xl md:text-4xl font-extrabold text-text-primary mb-8">Designing scalable solutions for complex enterprise challenges.</h3>
+            
+            <div class="space-y-6 text-lg text-text-secondary leading-relaxed font-light text-left md:text-center">
+                <p>
+                    I am a  Solutions Architect and Pega Lead System Architect with over two decades of experience designing and delivering enterprise-scale digital transformation solutions across Banking, Financial Services, Healthcare, and Telecommunications domains.
+                </p>
+                <p>
+                   I specialize in building resilient, scalable, and intelligent platforms using Pega, cloud-native architectures, and AI-driven automation. My expertise spans end-to-end solution architecture, complex system integrations, and large-scale program delivery—helping organizations modernize legacy systems and achieve measurable business outcomes. 
+                </p>
+                <p>
+                    In my current role, I lead strategic initiatives including Pega Cloud migrations, AI-powered dispute management systems, and telecom service orchestration solutions. I have successfully delivered high-impact programs using Order Management ,Smart Dispute,PGP, real-time decisioning, and next-generation customer engagement platforms.
+                </p>
+                <p>
+                    Beyond delivery, I actively contribute to presales, solution design, and innovation—developing reusable frameworks, mentoring architects, and driving AI adoption through Agentic AI and intelligent automation use cases.
+                </p>
+                <p>
+                 I am passionate about solving real-world problems using technology and continuously evolving with emerging trends in AI, cloud, and digital ecosystems.   
+                </p>
+            </div>
+            
+            <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 pt-10 border-t border-white/10">
+                <div>
+                    <div class="text-4xl font-extrabold text-text-primary">18+</div>
+                    <div class="text-sm font-medium text-text-secondary mt-2">Years Experience</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-extrabold text-text-primary">30%</div>
+                    <div class="text-sm font-medium text-text-secondary mt-2">Process Optimization</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-extrabold text-text-primary">$8M</div>
+                    <div class="text-sm font-medium text-text-secondary mt-2">Deal Executions</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-extrabold text-gradient">∞</div>
+                    <div class="text-sm font-medium text-text-secondary mt-2">Cups of Chai</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Core Competencies & Skills -->
+    <section id="skills" class="py-24 bg-bg-primary relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-sm font-bold tracking-widest text-accent-secondary uppercase mb-3">Technical Expertise</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-text-primary">My specialized toolset</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Skill Card 1 -->
+                <div class="bg-bg-secondary rounded-2xl p-8 shadow-lg hover:shadow-[0_0_25px_rgba(139,92,246,0.15)] transition-all duration-300 border border-white/5 border-t-4 border-t-accent-primary transform hover:-translate-y-1 relative group overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-accent-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-accent-primary/10 rounded-xl flex items-center justify-center text-accent-primary mb-6 border border-accent-primary/20">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-text-primary mb-4">Pega Ecosystem</h4>
+                        <ul class="space-y-3 text-text-secondary text-sm">
+                            <li class="flex items-center"><svg class="w-4 h-4 text-accent-primary mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Pega Platform </li>
+                            <li class="flex items-center"><svg class="w-4 h-4 text-accent-primary mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Customer Decision Hub (CDH)</li>
+                            <li class="flex items-center"><svg class="w-4 h-4 text-accent-primary mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Smart Dispute™ (Mastercard)</li>
+                            <li class="flex items-center"><svg class="w-4 h-4 text-accent-primary mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Pega Cloud and Dev Ops</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Skill Card 2 -->
+                <div class="bg-bg-secondary rounded-2xl p-8 shadow-lg hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition-all duration-300 border border-white/5 border-t-4 border-t-accent-secondary transform hover:-translate-y-1 relative group overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-accent-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-accent-secondary/10 rounded-xl flex items-center justify-center text-accent-secondary mb-6 border border-accent-secondary/20">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-text-primary mb-4">Cloud & AI</h4>
+                        <ul class="space-y-3 text-text-secondary text-sm">
+                            <li class="flex items-center"><svg class="w-4 h-4 text-accent-secondary mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Amazon Web Services (AWS)</li>
+                            <li class="flex items-center"><svg class="w-4 h-4 text-accent-secondary mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Generative AI & Copilot </li>
+                            <li class="flex items-center"><svg class="w-4 h-4 text-accent-secondary mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Prompt Engineering </li>
+                            <li class="flex items-center"><svg class="w-4 h-4 text-accent-secondary mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Alexa chatbot </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Skill Card 3 -->
+                <div class="bg-bg-secondary rounded-2xl p-8 shadow-lg hover:shadow-[0_0_25px_rgba(99,102,241,0.15)] transition-all duration-300 border border-white/5 border-t-4 border-t-indigo-custom transform hover:-translate-y-1 relative group overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-indigo-custom/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-indigo-custom/10 rounded-xl flex items-center justify-center text-indigo-custom mb-6 border border-indigo-custom/20">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-text-primary mb-4">Development & Data</h4>
+                        <ul class="space-y-3 text-text-secondary text-sm">
+                            <li class="flex items-center"><svg class="w-4 h-4 text-indigo-custom mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Full Stack (Python, Node, React)</li>
+                            <li class="flex items-center"><svg class="w-4 h-4 text-indigo-custom mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> REST/SOAP APIs, JSON, XML</li>
+                            <li class="flex items-center"><svg class="w-4 h-4 text-indigo-custom mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Big Data, Hadoop, MongoDB</li>
+                            <li class="flex items-center"><svg class="w-4 h-4 text-indigo-custom mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> RPA & Chatbot Building</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Skill Card 4 -->
+                <div class="bg-bg-secondary rounded-2xl p-8 shadow-lg hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition-all duration-300 border border-white/5 border-t-4 border-t-accent-secondary transform hover:-translate-y-1 relative group overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-accent-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-accent-secondary/10 rounded-xl flex items-center justify-center text-accent-secondary mb-6 border border-accent-secondary/20">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-text-primary mb-4">Leadership & Strategy</h4>
+                        <ul class="space-y-3 text-text-secondary text-sm">
+                            <li class="flex items-center"><svg class="w-4 h-4 text-accent-secondary mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Presales Solution Architecture</li>
+                            <li class="flex items-center"><svg class="w-4 h-4 text-accent-secondary mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Client Advisory & Workshops</li>
+                            <li class="flex items-center"><svg class="w-4 h-4 text-accent-secondary mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> LSA Mentoring & Team Growth</li>
+                            <li class="flex items-center"><svg class="w-4 h-4 text-accent-secondary mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Agile Methodologies & CI/CD</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Professional Experience -->
+    <section id="experience" class="py-24 bg-bg-secondary relative border-y border-white/5">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold tracking-widest text-accent-secondary uppercase mb-3">Career Journey & Impact</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-text-primary">Experience highlights</h3>
+            </div>
+
+            <div class="relative border-l-2 border-white/10 ml-3 md:ml-6 space-y-12">
+                
+                <!-- Timeline Item 1 -->
+                <div class="relative pl-8 md:pl-12 group">
+                    <div class="absolute w-6 h-6 bg-accent-primary rounded-full -left-[13px] border-4 border-bg-secondary shadow-[0_0_15px_rgba(139,92,246,0.6)] group-hover:bg-accent-secondary transition-colors duration-300"></div>
+                    <div class="bg-bg-primary rounded-2xl p-6 shadow-lg border border-white/5 hover:border-accent-primary/50 transition-colors">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <h4 class="text-xl font-bold text-text-primary">Principal Solutions Architect</h4>
+                                <h5 class="text-accent-secondary font-medium text-sm mt-1">Tech Mahindra (Australia)</h5>
+                            </div>
+                            <span class="inline-block mt-2 md:mt-0 bg-white/5 border border-white/10 text-text-secondary text-xs px-3 py-1 rounded-full font-medium">April 2013 — Present</span>
+                        </div>
+                        <ul class="space-y-2 text-text-secondary text-sm font-light">
+                            <li><strong class="font-semibold text-text-primary">Presales & Growth:</strong> Owned end-to-end presales for $5M–$8M engagements, enhancing client satisfaction and increasing revenue by 15%.</li>
+                            <li><strong class="font-semibold text-text-primary">Enterprise Solutions:</strong> Led Pega Smart Dispute implementations for Tier-1 banks (e.g., NAB), reducing dispute resolution time by 30%. Designed CDH solutions optimizing Telecom Collections.</li>
+                            <li><strong class="font-semibold text-text-primary">Cloud Architecture:</strong> Defined Pega Cloud 2.0 to 3.0 migration strategies, achieving a 95% success rate.</li>
+                            <li><strong class="font-semibold text-text-primary">Mentorship:</strong> Successfully mentored senior developers into LSAs, bolstering project delivery capabilities across APAC and Europe.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="relative pl-8 md:pl-12 group">
+                    <div class="absolute w-6 h-6 bg-white/20 rounded-full -left-[13px] border-4 border-bg-secondary group-hover:bg-accent-secondary group-hover:shadow-[0_0_15px_rgba(34,211,238,0.6)] transition-all duration-300"></div>
+                    <div class="bg-bg-primary rounded-2xl p-6 border border-white/5 hover:border-white/20 transition-colors">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <h4 class="text-xl font-bold text-text-primary">Technical Manager</h4>
+                                <h5 class="text-text-secondary font-medium text-sm mt-1">Cognizant Technology Solutions</h5>
+                            </div>
+                            <span class="inline-block mt-2 md:mt-0 bg-white/5 border border-white/10 text-text-secondary text-xs px-3 py-1 rounded-full font-medium">Dec 2011 — April 2013</span>
+                        </div>
+                        <p class="text-text-secondary text-sm font-light">Managed large-scale Pega teams and drove reliable project delivery through strong governance, planning, and execution. Introduced process improvements to optimize operations and strengthen cost management.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="relative pl-8 md:pl-12 group">
+                    <div class="absolute w-6 h-6 bg-white/20 rounded-full -left-[13px] border-4 border-bg-secondary group-hover:bg-indigo-custom group-hover:shadow-[0_0_15px_rgba(99,102,241,0.6)] transition-all duration-300"></div>
+                    <div class="bg-bg-primary rounded-2xl p-6 border border-white/5 hover:border-white/20 transition-colors">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <h4 class="text-xl font-bold text-text-primary">Senior Software Engineer / Pega Architect</h4>
+                                <h5 class="text-text-secondary font-medium text-sm mt-1">Mahindra Satyam</h5>
+                            </div>
+                            <span class="inline-block mt-2 md:mt-0 bg-white/5 border border-white/10 text-text-secondary text-xs px-3 py-1 rounded-full font-medium">Sep 2008 — Dec 2011</span>
+                        </div>
+                        <p class="text-text-secondary text-sm font-light">Developed robust Pega applications for major accounts (OCBC, GE USA), contributing to a 30% increase in application stability. Conducted complex code reviews and troubleshooting.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 (Grouped Early Career) -->
+                <div class="relative pl-8 md:pl-12 group">
+                    <div class="absolute w-6 h-6 bg-white/10 rounded-full -left-[13px] border-4 border-bg-secondary group-hover:bg-white/40 transition-all duration-300"></div>
+                    <div class="bg-bg-primary/50 rounded-2xl p-6 border border-white/5">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                            <div>
+                                <h4 class="text-lg font-bold text-text-primary">Early Career in Software Engineering</h4>
+                                <h5 class="text-text-secondary font-medium text-sm mt-1">Wipro Technologies & Satyam Computer Services</h5>
+                            </div>
+                            <span class="inline-block mt-2 md:mt-0 bg-white/5 text-text-secondary text-xs px-3 py-1 rounded-full font-medium">2005 — 2008</span>
+                        </div>
+                        <p class="text-text-secondary text-sm font-light italic">Foundation years building Pega PRPC skills, executing GE enterprise rules, and acting as a Pega Senior Developer for the UBS account.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Proof of Concepts (POCs) -->
+    <section id="pocs" class="py-24 bg-bg-primary relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold tracking-widest text-accent-secondary uppercase mb-3">Proof of Concepts</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-text-primary">Recent POCs & Projects</h3>
+                <p class="mt-4 text-text-secondary max-w-2xl mx-auto font-light">A selection of prototypes and solutions I've engineered to demonstrate the capabilities of Pega, Gen AI, and AWS.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- POC Card 1 -->
+                <div class="bg-bg-secondary rounded-2xl overflow-hidden shadow-lg hover:shadow-[0_0_25px_rgba(139,92,246,0.15)] transition-all duration-300 transform hover:-translate-y-1 border border-white/5 flex flex-col group">
+                    <div class="h-48 overflow-hidden bg-bg-primary relative">
+                        <div class="absolute inset-0 bg-gradient-to-t from-bg-secondary to-transparent z-10 opacity-60"></div>
+                        <img src="assets/images/PegaAgenticAi.png" alt="POC 1 - Pega Agentic AI " class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col relative z-20">
+                        <h4 class="text-xl font-bold text-text-primary mb-2 group-hover:text-accent-primary transition-colors">Pega Agentic Ai</h4>
+                        <p class="text-text-secondary text-sm font-light mb-4 flex-1">Broadband Provisioning Self-Healing AI Agent built using Pega Platform 25.x Agentic AI.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="px-2 py-1 bg-accent-primary/10 text-accent-primary text-xs font-medium rounded border border-accent-primary/20">Pega Gen AI</span>
+                            <span class="px-2 py-1 bg-accent-primary/10 text-accent-primary text-xs font-medium rounded border border-accent-primary/20">ChatGPT 4.2 mini LLM</span>
+                            <span class="px-2 py-1 bg-accent-primary/10 text-accent-primary text-xs font-medium rounded border border-accent-primary/20">Pega Case Management</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- POC Card 2 -->
+                <div class="bg-bg-secondary rounded-2xl overflow-hidden shadow-lg hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition-all duration-300 transform hover:-translate-y-1 border border-white/5 flex flex-col group">
+                    <div class="h-48 overflow-hidden bg-bg-primary relative">
+                        <div class="absolute inset-0 bg-gradient-to-t from-bg-secondary to-transparent z-10 opacity-60"></div>
+                        <img src="assets/images/NFM.png" alt="POC 2 - Cloud Architecture" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col relative z-20">
+                        <h4 class="text-xl font-bold text-text-primary mb-2 group-hover:text-accent-secondary transition-colors">Pega Event Strategy</h4>
+                        <p class="text-text-secondary text-sm font-light mb-4 flex-1">Network Device Fault Management with Pega AI.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="px-2 py-1 bg-accent-secondary/10 text-accent-secondary text-xs font-medium rounded border border-accent-secondary/20">Pega CDH</span>
+                            <span class="px-2 py-1 bg-accent-secondary/10 text-accent-secondary text-xs font-medium rounded border border-accent-secondary/20">Pega Gen Ai</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- POC Card 3 -->
+                <div class="bg-bg-secondary rounded-2xl overflow-hidden shadow-lg hover:shadow-[0_0_25px_rgba(99,102,241,0.15)] transition-all duration-300 transform hover:-translate-y-1 border border-white/5 flex flex-col group">
+                    <div class="h-48 overflow-hidden bg-bg-primary relative">
+                        <div class="absolute inset-0 bg-gradient-to-t from-bg-secondary to-transparent z-10 opacity-60"></div>
+                        <img src="assets/images/hyderabadpic.jpg" alt="POC 3 - Automation Workflow" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col relative z-20">
+                        <h4 class="text-xl font-bold text-text-primary mb-2 group-hover:text-indigo-custom transition-colors">Coming Soon..</h4>
+                        <p class="text-text-secondary text-sm font-light mb-4 flex-1">A prototype built using........</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="px-2 py-1 bg-indigo-custom/10 text-indigo-custom text-xs font-medium rounded border border-indigo-custom/20">Pega PSD</span>
+                            <span class="px-2 py-1 bg-indigo-custom/10 text-indigo-custom text-xs font-medium rounded border border-indigo-custom/20">Case Management</span>
+                            <span class="px-2 py-1 bg-indigo-custom/10 text-indigo-custom text-xs font-medium rounded border border-indigo-custom/20">RPA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Credentials & Education -->
+    <section id="credentials" class="py-24 bg-bg-secondary relative border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16">
+                
+                <!-- Certifications -->
+                <div>
+                    <h2 class="text-sm font-bold tracking-widest text-accent-secondary uppercase mb-3">Verified Expertise</h2>
+                    <h3 class="text-3xl font-extrabold text-text-primary mb-8">Certifications</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-bg-primary p-5 rounded-xl shadow-sm border border-white/5 flex items-center group hover:border-accent-primary/50 hover:shadow-[0_0_15px_rgba(139,92,246,0.15)] transition-all">
+                            <div class="w-10 h-10 bg-accent-primary/10 rounded-full flex items-center justify-center text-accent-primary mr-4 border border-accent-primary/20">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            </div>
+                            <span class="font-medium text-text-primary">Pega Certified Lead System Architect (PCLSA)</span>
+                        </div>
+                        <div class="bg-bg-primary p-5 rounded-xl shadow-sm border border-white/5 flex items-center group hover:border-accent-secondary/50 hover:shadow-[0_0_15px_rgba(34,211,238,0.15)] transition-all">
+                            <div class="w-10 h-10 bg-accent-secondary/10 rounded-full flex items-center justify-center text-accent-secondary mr-4 border border-accent-secondary/20">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            </div>
+                            <span class="font-medium text-text-primary">Pega Certified Decisioning Consultant (PCDC)</span>
+                        </div>
+                        <div class="bg-bg-primary p-5 rounded-xl shadow-sm border border-white/5 flex items-center group hover:border-indigo-custom/50 hover:shadow-[0_0_15px_rgba(99,102,241,0.15)] transition-all">
+                            <div class="w-10 h-10 bg-indigo-custom/10 rounded-full flex items-center justify-center text-indigo-custom mr-4 border border-indigo-custom/20">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            </div>
+                            <span class="font-medium text-text-primary">AWS Solution Architect</span>
+                        </div>
+                        <div class="bg-bg-primary p-5 rounded-xl shadow-sm border border-white/5 flex items-center group hover:border-accent-secondary/50 hover:shadow-[0_0_15px_rgba(34,211,238,0.15)] transition-all">
+                            <div class="w-10 h-10 bg-accent-secondary/10 rounded-full flex items-center justify-center text-accent-secondary mr-4 border border-accent-secondary/20">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            </div>
+                            <span class="font-medium text-text-primary">AI White Belt (Tech Mahindra) & Prompt Engineering</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div>
+                    <h2 class="text-sm font-bold tracking-widest text-accent-secondary uppercase mb-3">Academic Background</h2>
+                    <h3 class="text-3xl font-extrabold text-text-primary mb-8">Education</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-bg-primary p-6 rounded-2xl shadow-sm border border-white/5 border-l-4 border-l-accent-primary">
+                            <div class="flex items-center justify-between mb-2">
+                                <h4 class="text-lg font-bold text-text-primary">MSc. Information Systems</h4>
+                                <span class="text-xs font-medium text-accent-primary bg-accent-primary/10 px-2 py-1 rounded">2002 — 2004</span>
+                            </div>
+                            <p class="text-text-secondary font-medium text-sm">Osmania University</p>
+                            <p class="mt-3 text-text-secondary opacity-80 text-sm font-light">Advanced studies focused on information science, data analytics, and enterprise systems architecture.</p>
+                        </div>
+
+                        <div class="bg-bg-primary p-6 rounded-2xl shadow-sm border border-white/5 border-l-4 border-l-accent-secondary">
+                            <div class="flex items-center justify-between mb-2">
+                                <h4 class="text-lg font-bold text-text-primary">Bachelor of Computer Applications</h4>
+                                <span class="text-xs font-medium text-accent-secondary bg-accent-secondary/10 px-2 py-1 rounded">1999 — 2002</span>
+                            </div>
+                            <p class="text-text-secondary font-medium text-sm">Osmania University</p>
+                            <p class="mt-3 text-text-secondary opacity-80 text-sm font-light">Foundational computer science principles, programming methodologies, and software development.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Footer & Contact -->
+    <section id="contact" class="py-24 bg-bg-primary text-text-primary relative overflow-hidden">
+        <!-- Decorative subtle pattern -->
+        <div class="absolute inset-0 opacity-[0.03]">
+            <svg class="h-full w-full" fill="none" stroke="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0 100L100 0M-50 100L100 -50" stroke-width="2"></path>
+            </svg>
+        </div>
+        
+        <!-- Deep Glow at bottom -->
+        <div class="absolute bottom-[-20%] left-[20%] w-[60%] h-[40%] bg-gradient-primary rounded-[100%] blur-[120px] opacity-10 pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-4xl sm:text-5xl font-extrabold mb-6">Ready to <span class="text-gradient">collaborate?</span></h2>
+            <p class="text-lg text-text-secondary font-light max-w-2xl mx-auto mb-12">
+                Want to discuss enterprise architecture, AI integration, or just catch up? Let's talk over a nice cup of Irani chai!
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
+                <a href="mailto:sureshaws077@gmail.com" class="flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-gradient-primary hover:shadow-[0_0_25px_rgba(34,211,238,0.4)] rounded-xl text-white font-semibold transition-all transform hover:-translate-y-1">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    sureshaws077@gmail.com
+                </a>
+                
+                <a href="https://www.linkedin.com/in/suresh-m-277a821b" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-bg-secondary hover:bg-[#28364c] border border-white/10 rounded-xl text-text-primary font-semibold hover:border-white/20 hover:shadow-[0_0_20px_rgba(255,255,255,0.05)] transition-all transform hover:-translate-y-1">
+                    <svg class="w-5 h-5 mr-3 text-[#0077b5]" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    Connect on LinkedIn
+                </a>
+            </div>
+
+            <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-sm text-text-secondary">
+                <p>&copy; 2024 Suresh . All rights reserved.</p>
+                <a href="https://mulukasu.github.io/cv/" target="_blank" class="mt-4 md:mt-0 hover:text-accent-secondary transition-colors">Personal Hub</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
